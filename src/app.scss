@@ -1,0 +1,83 @@
+// colors
+$accent-color: hsl(25, 97%, 53%);
+$header-color: hsl(0, 0%, 100%);
+$card-color: hsl(213, 19%, 18%);
+$circle-background-color: hsl(213, 19%, 20%);
+$background-color: hsl(216, 12%, 8%);
+$paragraph-color: hsl(216, 12%, 54%);
+
+$unknown-1: hsl(217, 12%, 63%);
+
+// fonts
+$ff: 'Overpass', sans-serif;
+$fw-regular: 400;
+$fw-bold: 700;
+$fs-paragraph: 15px;
+
+// initial properties
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $background-color;
+}
+
+.App {
+    height: 100vh;
+
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        background-color: $card-color;
+
+        // card dimensions
+        width: 450px;
+        height: 450px;
+        border-radius: 25px;
+        padding: 35px;
+
+        // fonts
+        font-family: $ff;
+
+        .card-header {
+
+            .logo-container {
+                background-color: $circle-background-color;
+
+                // dimensions
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+
+                // flex
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .card-content {
+            margin-top: 25px;
+
+            h1 {
+                margin-bottom: 10px;
+
+                // font
+                color: $header-color;
+                font-weight: $fw-bold;
+            }
+
+            p {
+                color: $paragraph-color;
+                font-weight: $fw-bold;
+                line-height: 25px;
+            }
+        }
+    }
+}

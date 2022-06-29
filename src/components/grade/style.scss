@@ -1,0 +1,40 @@
+// colors
+$active-color: hsl(217, 12%, 63%);
+$paragraph-color: hsl(216, 12%, 54%);
+$accent-color: hsl(25, 97%, 53%);
+$circle-background-color: hsl(213, 19%, 20%);
+$header-color: hsl(0, 0%, 100%);
+
+// fonts
+$fw-bold: 700;
+
+.grade-container {
+    font-weight: $fw-bold;
+    cursor: pointer;
+
+    // dimensions
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // colors
+    background-color: $circle-background-color;
+    color: $paragraph-color;
+
+    // hover
+    &:hover {
+        // colors
+        background-color: $accent-color;
+        color: $header-color;
+    }
+}
+
+// active
+.grade-container_active {
+    background-color: $active-color;
+}
