@@ -1,6 +1,6 @@
 // colors
-$active-color: hsl(217, 12%, 63%);
-$paragraph-color: hsl(216, 12%, 54%);
+$paragraph-color: hsl(217, 12%, 63%);
+$active-color: hsl(216, 12%, 54%);
 $accent-color: hsl(25, 97%, 53%);
 $circle-background-color: hsl(213, 19%, 20%);
 $header-color: hsl(0, 0%, 100%);
@@ -13,8 +13,8 @@ $fw-bold: 700;
     cursor: pointer;
 
     // dimensions
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
 
     // flex
@@ -24,17 +24,22 @@ $fw-bold: 700;
 
     // colors
     background-color: $circle-background-color;
-    color: $paragraph-color;
+    color: $active-color;
 
     // hover
     &:hover {
         // colors
         background-color: $accent-color;
         color: $header-color;
+
+        // animation
+        transition: 0.3s;
     }
 }
 
 // active
-.grade-container_active {
-    background-color: $active-color;
+.grade-container_active,
+.grade-container_active:hover {
+    background-color: $paragraph-color;
+    color: $header-color;
 }

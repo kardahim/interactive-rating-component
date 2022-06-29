@@ -29,6 +29,7 @@ function App() {
             <Grade grade={4} />
             <Grade grade={5} />
           </div>
+          <button>submit</button>
         </div>
       </main>
     </div>
