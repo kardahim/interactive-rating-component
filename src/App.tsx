@@ -52,7 +52,17 @@ function App() {
             <button onClick={() => submit()}>submit</button>
           </div>
         </main> :
-        <main className='card'></main>
+        <main className='card card--after-grade'>
+          <div className="thanks-icon-container"><img src={thanks} alt="thanks-icon" /></div>
+          <div className='current-grade'>You selected {localStorage.getItem("grade")} out of 5</div>
+          <div className='thanks-content'>
+            <h1>Thank you!</h1>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever need more support,
+              don’t hesitate to get in touch!
+            </p>
+          </div>
+        </main>
       }
     </div>
   );

@@ -1,7 +1,7 @@
 // colors
 $accent-color: hsl(25, 97%, 53%);
 $header-color: hsl(0, 0%, 100%);
-$card-color: hsl(213, 19%, 18%);
+$card-color: hsl(213, 19%, 15%);
 $circle-background-color: hsl(213, 19%, 20%);
 $background-color: hsl(216, 12%, 8%);
 $paragraph-color: hsl(216, 12%, 54%);
@@ -119,6 +119,51 @@ body {
                     // animation
                     transition: 0.3s;
                 }
+            }
+        }
+    }
+
+    .card--after-grade {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .thanks-icon-container {
+            margin: 10px 0 20px;
+        }
+
+        .current-grade {
+            background-color: $circle-background-color;
+            color: $accent-color;
+
+            // dimensions
+            height: 30px;
+            padding: 20px 20px 15px;
+            border-radius: 20px;
+
+            // flex
+            display: flex;
+            align-items: center;
+
+            margin: 10px 0 30px;
+        }
+
+        .thanks-content {
+            text-align: center;
+
+            h1 {
+                color: $header-color;
+                font-weight: $fw-bold;
+                font-size: 26px;
+
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $paragraph-color;
+                font-weight: $fw-bold;
+                line-height: 25px;
+                font-weight: $fw-regular;
             }
         }
     }
