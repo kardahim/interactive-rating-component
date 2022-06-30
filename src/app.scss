@@ -14,6 +14,13 @@ $fw-regular: 400;
 $fw-bold: 700;
 $fs-paragraph: 15px;
 
+// mixins
+@mixin mobile {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
 // initial properties
 * {
     box-sizing: border-box;
@@ -39,6 +46,12 @@ body {
         // card dimensions
         width: 430px;
         height: 430px;
+
+        @include mobile {
+            width: 330px;
+            padding: 25px;
+        }
+
         border-radius: 25px;
         padding: 35px;
 
@@ -67,6 +80,7 @@ body {
 
             h1 {
                 margin-bottom: 10px;
+                font-size: 26px;
 
                 // font
                 color: $header-color;
