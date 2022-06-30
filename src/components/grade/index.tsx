@@ -4,6 +4,7 @@ import './style.scss'
 
 interface GradeInterface {
     grade: number
+    passData: any
 }
 
 function index(props: GradeInterface) {
@@ -16,9 +17,7 @@ function index(props: GradeInterface) {
         }
 
         element.classList.add('grade-container_active')
-
-        // localStorage
-        localStorage.setItem("grade", props.grade.toString());
+        props.passData(props.grade.toString())
     }
 
     return (
